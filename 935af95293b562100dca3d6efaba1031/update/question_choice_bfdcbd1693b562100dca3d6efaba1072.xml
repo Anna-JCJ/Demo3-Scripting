@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>300</order>
+        <published_ref/>
+        <question display_value="Office Supply Select">f6abb5d293b562100dca3d6efaba10a6</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-31 05:31:46</sys_created_on>
+        <sys_id>bfdcbd1693b562100dca3d6efaba1072</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>File Folders</sys_name>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_update_name>question_choice_bfdcbd1693b562100dca3d6efaba1072</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-31 05:31:46</sys_updated_on>
+        <text>File Folders</text>
+        <value>file_folders</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=bfdcbd1693b562100dca3d6efaba1072"/>
+</record_update>
