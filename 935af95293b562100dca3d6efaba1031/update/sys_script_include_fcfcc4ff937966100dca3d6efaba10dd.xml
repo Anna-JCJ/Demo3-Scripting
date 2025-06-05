@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1734528_practi_0.SearchRequestItem</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>SearchRequestItem</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var SearchRequestItem = Class.create();
+SearchRequestItem.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    type: 'SearchRequestItem',
+    search: function() {
+		var result = {};
+        var req_item_id = this.getParameter('req_item_id');
+        gs.info("===================" + req_item_id);
+        var gr = new GlideRecord('sc_req_item');
+        if (gr.get(req_item_id)) {
+            for (var key in gr.variables) {
+                result[key] = gr.variables[key] + '';
+            }
+        }
+        return JSON.stringify(result);
+    }
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-04 13:18:14</sys_created_on>
+        <sys_id>fcfcc4ff937966100dca3d6efaba10dd</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>SearchRequestItem</sys_name>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_update_name>sys_script_include_fcfcc4ff937966100dca3d6efaba10dd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-04 13:46:23</sys_updated_on>
+    </sys_script_include>
+</record_update>
