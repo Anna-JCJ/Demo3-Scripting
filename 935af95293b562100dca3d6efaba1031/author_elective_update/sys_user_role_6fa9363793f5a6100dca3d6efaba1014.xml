@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="DELETE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>The person responsible for implementation</description>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_1734528_practi_0.fulfiller</name>
+        <scoped_admin>false</scoped_admin>
+        <suffix>fulfiller</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-05 01:48:20</sys_created_on>
+        <sys_id>6fa9363793f5a6100dca3d6efaba1014</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1734528_practi_0.fulfiller</sys_name>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_update_name>sys_user_role_6fa9363793f5a6100dca3d6efaba1014</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-05 01:48:20</sys_updated_on>
+    </sys_user_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</application>
+        <file_path/>
+        <instance_id>92e8a9a53bfca210baf6048aa4e45ade</instance_id>
+        <instance_name>dev322415</instance_name>
+        <name>sys_user_role_6fa9363793f5a6100dca3d6efaba1014</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role"><sys_user_role action="INSERT_OR_UPDATE"><assignable_by/><can_delegate>true</can_delegate><description>The person responsible for implementation</description><elevated_privilege>false</elevated_privilege><grantable>true</grantable><includes_roles/><name>x_1734528_practi_0.fulfiller</name><scoped_admin>false</scoped_admin><suffix>fulfiller</suffix><sys_class_name>sys_user_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-06-05 01:48:20</sys_created_on><sys_id>6fa9363793f5a6100dca3d6efaba1014</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1734528_practi_0.fulfiller</sys_name><sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package><sys_policy/><sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope><sys_update_name>sys_user_role_6fa9363793f5a6100dca3d6efaba1014</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-06-05 01:48:20</sys_updated_on></sys_user_role></record_update>]]></payload>
+        <payload_hash>-1391849680</payload_hash>
+        <record_name>x_1734528_practi_0.fulfiller</record_name>
+        <reverted_from/>
+        <source>5b4f951b93f5e2100dca3d6efaba1040</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-05 01:48:20</sys_created_on>
+        <sys_id>2ba9363793f5a6100dca3d6efaba1018</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1973dc6604b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-05 01:48:20</sys_updated_on>
+        <type>Role</type>
+        <update_guid>2fa93637adf5a6100b523a6fa2597c17</update_guid>
+        <update_guid_history>2fa93637adf5a6100b523a6fa2597c17:-1391849680</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_1734528_practi_0.fulfiller">a2d59e649302aa100dca3d6efaba100e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-07 07:07:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role">sys_user_role</sys_db_object>
+        <sys_id>573b30522e2f4279b78932cbe6ce5ba9</sys_id>
+        <sys_metadata>6fa9363793f5a6100dca3d6efaba1014</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1734528_practi_0.fulfiller</sys_name>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_scope_delete display_value="">1c94049e3e40455e97c2151f3f31a0a1</sys_scope_delete>
+        <sys_update_name>sys_user_role_6fa9363793f5a6100dca3d6efaba1014</sys_update_name>
+        <sys_update_version display_value="sys_user_role_6fa9363793f5a6100dca3d6efaba1014">2ba9363793f5a6100dca3d6efaba1018</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-07 07:07:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

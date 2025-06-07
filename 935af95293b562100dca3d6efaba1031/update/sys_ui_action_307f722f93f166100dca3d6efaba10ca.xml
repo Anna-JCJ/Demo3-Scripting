@@ -31,10 +31,6 @@
         <onclick>onReturnClick()</onclick>
         <order>100</order>
         <script><![CDATA[function onReturnClick() {
-	// var ga = new GliedAjax('RerurnApprovalScript');
-	// ga.addparam('sysparm_name','cancelApproval');
-	// ga.addParam('sysparm_request_item_number',g_form.getValue('number'));
-	// ga.getXml(function(res){});
 	g_form.setValue('state', 4);
 	g_form.save();
 }]]></script>
@@ -48,7 +44,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>307f722f93f166100dca3d6efaba10ca</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Return to Requester</sys_name>
         <sys_overrides/>
         <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
@@ -56,7 +52,7 @@
         <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
         <sys_update_name>sys_ui_action_307f722f93f166100dca3d6efaba10ca</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-04 12:06:27</sys_updated_on>
+        <sys_updated_on>2025-06-07 11:16:41</sys_updated_on>
         <table>sc_task</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
