@@ -17,8 +17,8 @@ SaveRequestItem.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             status: 'ng'
         };
         var req_item_id = this.getParameter('req_item_id');
-        result['req_item_id'] = req_item_id;
         gs.info("=================== save: " + req_item_id);
+        result['req_item_id'] = req_item_id;
         var qa1 = this.getParameter('qa1');
         var qa2 = this.getParameter('qa2');
         var qa3 = this.getParameter('qa3');
@@ -27,9 +27,9 @@ SaveRequestItem.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             gr.variables['office_supply_select'] = qa1;
             gr.variables['quantity'] = qa2;
             gr.variables['description'] = qa3;
-            gr.state = 1;
+            gr.state = 1; // open
             gr.update();
-            result['status'] = 'ok';
+            result.status = 'ok';
         }
         return JSON.stringify(result);
     }
@@ -38,13 +38,13 @@ SaveRequestItem.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-06-04 14:03:58</sys_created_on>
         <sys_id>b09750bf93b966100dca3d6efaba1098</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>SaveRequestItem</sys_name>
         <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
         <sys_update_name>sys_script_include_b09750bf93b966100dca3d6efaba1098</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-06-07 11:46:04</sys_updated_on>
+        <sys_updated_on>2025-06-07 13:47:44</sys_updated_on>
     </sys_script_include>
 </record_update>
