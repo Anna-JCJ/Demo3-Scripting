@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="OfficeSuppliesRequest5-2">121df72293522a900dca3d6efaba102e</sc_cat_item>
+        <sc_category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-26 06:08:03</sys_created_on>
+        <sys_id>fc8e3ba293522a900dca3d6efaba103b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Can We Help You?.OfficeSuppliesRequest5-2</sys_name>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_update_name>sc_cat_item_category_fc8e3ba293522a900dca3d6efaba103b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-26 06:08:03</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</application>
+        <file_path/>
+        <instance_id>92e8a9a53bfca210baf6048aa4e45ade</instance_id>
+        <instance_name>dev322415</instance_name>
+        <name>sc_cat_item_category_fc8e3ba293522a900dca3d6efaba103b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="OfficeSuppliesRequest5-2">121df72293522a900dca3d6efaba102e</sc_cat_item><sc_category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-06-26 06:08:03</sys_created_on><sys_id>fc8e3ba293522a900dca3d6efaba103b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Can We Help You?.OfficeSuppliesRequest5-2</sys_name><sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package><sys_policy/><sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope><sys_update_name>sc_cat_item_category_fc8e3ba293522a900dca3d6efaba103b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-06-26 06:08:03</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-1705400541</payload_hash>
+        <record_name>Can We Help You?.OfficeSuppliesRequest5-2</record_name>
+        <reverted_from/>
+        <source>5b4f951b93f5e2100dca3d6efaba1040</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-26 06:08:03</sys_created_on>
+        <sys_id>388e3ba293522a900dca3d6efaba1040</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197aad9b5070000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-26 06:08:03</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>788e3ba223522a903528425e89797a3f</update_guid>
+        <update_guid_history>788e3ba223522a903528425e89797a3f:-1705400541</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Can We Help You?.OfficeSuppliesRequest5-2">c6aefba293522a900dca3d6efaba108d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-26 06:08:41</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>6ffea53a0b0d4d8996046c220489fa49</sys_id>
+        <sys_metadata>fc8e3ba293522a900dca3d6efaba103b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Can We Help You?.OfficeSuppliesRequest5-2</sys_name>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_scope_delete display_value="">1c94049e3e40455e97c2151f3f31a0a1</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_fc8e3ba293522a900dca3d6efaba103b</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_fc8e3ba293522a900dca3d6efaba103b">388e3ba293522a900dca3d6efaba1040</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-26 06:08:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
