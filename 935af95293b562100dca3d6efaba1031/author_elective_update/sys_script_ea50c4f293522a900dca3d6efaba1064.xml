@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sc_req_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sc_req_item">cat_item=121df72293522a900dca3d6efaba102e^EQ<item display_table="sc_cat_item" display_value="OfficeSuppliesRequest5-2" endquery="false" field="cat_item" goto="false" newquery="false" operator="=" or="false" value="121df72293522a900dca3d6efaba102e"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Add Manage to Watch List-2</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    try {
+        var openedBySysId = current.opened_by.sys_id;
+        if (!openedBySysId) {
+            gs.info('No user found for request: ' + current.number);
+            return;
+        }
+        
+        var userGR = new GlideRecord('sys_user');
+        if (!userGR.get(openedBySysId)) {
+            gs.warn('User not found: ' + requestedFor);
+            return;
+        }
+        
+        var managerSysId = userGR.manager.sys_id;
+        if (!managerSysId) {
+            gs.warn('No manager found for user: ' + userGR.name + ' (' + userGR.sys_id + ')');
+            return;
+        }
+
+        var reqItemGR = new GlideRecord('sc_req_item');
+        reqItemGR.addQuery('number', current.number); 
+        reqItemGR.query();
+
+        while (reqItemGR.next()) {
+            var currentWatchList = reqItemGR.watch_list || '';
+            
+            if (currentWatchList.includes(managerSysId)) {
+                continue; 
+            }
+            reqItemGR.watch_list = currentWatchList ? 
+                                  currentWatchList + ',' + managerSysId : 
+                                  managerSysId;
+            
+            reqItemGR.setWorkflow(false); 
+            reqItemGR.update();
+        }
+        
+    }
+    catch (e) {
+        gs.error('Business Rule Error: ' + e.message + '\nStack: ' + e.stack);
+      }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-26 06:19:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ea50c4f293522a900dca3d6efaba1064</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Add Manage to Watch List-2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_update_name>sys_script_ea50c4f293522a900dca3d6efaba1064</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-26 13:10:05</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=ea50c4f293522a900dca3d6efaba1064"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</application>
+        <file_path/>
+        <instance_id>92e8a9a53bfca210baf6048aa4e45ade</instance_id>
+        <instance_name>dev322415</instance_name>
+        <name>sys_script_ea50c4f293522a900dca3d6efaba1064</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;sc_req_item&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="sc_req_item"&gt;cat_item=121df72293522a900dca3d6efaba102e^EQ&lt;item display_table="sc_cat_item" display_value="OfficeSuppliesRequest5-2" endquery="false" field="cat_item" goto="false" newquery="false" operator="=" or="false" value="121df72293522a900dca3d6efaba102e"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Add Manage to Watch List-2&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    try {
+        var openedBySysId = current.opened_by.sys_id;
+        if (!openedBySysId) {
+            gs.info('No user found for request: ' + current.number);
+            return;
+        }
+        
+        var userGR = new GlideRecord('sys_user');
+        if (!userGR.get(openedBySysId)) {
+            gs.warn('User not found: ' + requestedFor);
+            return;
+        }
+        
+        var managerSysId = userGR.manager.sys_id;
+        if (!managerSysId) {
+            gs.warn('No manager found for user: ' + userGR.name + ' (' + userGR.sys_id + ')');
+            return;
+        }
+
+        var reqItemGR = new GlideRecord('sc_req_item');
+        reqItemGR.addQuery('number', current.number); 
+        reqItemGR.query();
+
+        while (reqItemGR.next()) {
+            var currentWatchList = reqItemGR.watch_list || '';
+            
+            if (currentWatchList.includes(managerSysId)) {
+                continue; 
+            }
+            reqItemGR.watch_list = currentWatchList ? 
+                                  currentWatchList + ',' + managerSysId : 
+                                  managerSysId;
+            
+            reqItemGR.setWorkflow(false); 
+            reqItemGR.update();
+        }
+        
+    }
+    catch (e) {
+        gs.error('Business Rule Error: ' + e.message + '\nStack: ' + e.stack);
+      }
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-26 06:19:25&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;ea50c4f293522a900dca3d6efaba1064&lt;/sys_id&gt;&lt;sys_mod_count&gt;24&lt;/sys_mod_count&gt;&lt;sys_name&gt;Add Manage to Watch List-2&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0"&gt;935af95293b562100dca3d6efaba1031&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Practice3 Scripting"&gt;935af95293b562100dca3d6efaba1031&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_ea50c4f293522a900dca3d6efaba1064&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-26 13:10:05&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=ea50c4f293522a900dca3d6efaba1064"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-485703294</payload_hash>
+        <record_name>Add Manage to Watch List-2</record_name>
+        <reverted_from/>
+        <source>ecae51be931a2a900dca3d6efaba1034</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-26 13:10:05</sys_created_on>
+        <sys_id>871fd9be931a2a900dca3d6efaba109b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197ac5c179f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-26 13:10:05</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>831f9d7e5f1a2a904f9c1bf68fed6c19</update_guid>
+        <update_guid_history>831f9d7e5f1a2a904f9c1bf68fed6c19:-485703294,2c5e51fa991a2a90ef83f1c1bf2b92c4:1871437937,695bd97aca1a2a901662e595041281a6:928239320,f4e95df6331a2a90a34e501393eb329e:944375640,a9e315328a1a2a9043eea4935af1e829:476427978,97f25dbe9fd62a90fbcc13e31e384e58:-1139465441,1e9259be39d62a905eb050490d2fe532:480987709,c8a1157e2cd62a9006ede6d5de2b4ea6:-329961397,8340d5fa6dd62a90a4d4e93c187933ed:-1055712084,9a10d1fa29d62a90f786345a45486c83:476259790,eccf0dba50d62a90bd64034ec4c0525e:773143689,a0ee057a8ed62a90067a4285e2834028:-596862833,717d0db6a7d62a9067f31140f5596a11:-1779989542,934b0d36e3d62a907c1e8916d12ec5d1:1835280907,f8cb547a06d22a90a14746c29026ce01:737687701,aa57143678d22a90ffcf86392a58e897:-2082693037,6b05dc321bd22a9084ace6d1ed691ea2:1810433497,6a845cfe54922a90976ea2cebead2f7a:98780496,c08098ba63922a90f64337912052184c:-733651296,1199c8fee6522a90838110be21f286cf:1064871568,6ee8ccfe45522a904d0152147f3aa685:-639786139,3a88c4fe44522a90ee61799a4c2134fa:-950090172,8d4548babf522a90de23d392bc4688b0:526304765,ccd280f2f3522a900165107f58112ab7:1231392103,1311c4f2eb522a9027034e431caab76f:-1948058592</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-06-28 12:30:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>2bea7b67eba848c59cd84d2bdf7e3281</sys_id>
+        <sys_metadata>ea50c4f293522a900dca3d6efaba1064</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add Manage to Watch List-2</sys_name>
+        <sys_package display_value="Practice3 Scripting" source="x_1734528_practi_0">935af95293b562100dca3d6efaba1031</sys_package>
+        <sys_parent display_value="Sc Req Item">bce6906398e0221055904c91e2b654d4</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Practice3 Scripting">935af95293b562100dca3d6efaba1031</sys_scope>
+        <sys_scope_delete display_value="">1c94049e3e40455e97c2151f3f31a0a1</sys_scope_delete>
+        <sys_update_name>sys_script_ea50c4f293522a900dca3d6efaba1064</sys_update_name>
+        <sys_update_version display_value="sys_script_ea50c4f293522a900dca3d6efaba1064">871fd9be931a2a900dca3d6efaba109b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-06-28 12:30:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
